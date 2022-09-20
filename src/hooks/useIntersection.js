@@ -10,15 +10,18 @@ export const useIntersection = (options) => {
     }
 
     useEffect(() => {
+        // create variable that will hold ref, getting rid of the warning
+        let observerRefValue = null
         const observer = new IntersectionObserver(callback, options)
         // if there is something to observe
         if (containerRef.current) {
             observer.observe(containerRef.current)
+            observerRefValue = containerRef.current
         }
         // clean up function
         return () => {
-            if (containerRef.current) {
-                observer.unobserve(containerRef.current)
+            if (observerRefValue) {
+                observer.unobserve(observerRefValue)
             }
         }
     })

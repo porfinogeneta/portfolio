@@ -21,11 +21,11 @@ export default function Projects() {
     return (
         <div className={`${styles.container}`}>
             <div className={`${styles['first-project']} `}  ref={firstContainerRef}>
-                <img  className={firstIsVisible ? 'show-up' : 'hidden-up'} src={require('../assets/photos/rockpaperscissors.png')} alt={"photo"}/>
+                <img  className={firstIsVisible ? 'show-up' : 'hidden-up'} src={require('../assets/photos/rockpaperscissors.png')} alt={"my_game"}/>
             </div>
             <div className={`${styles['second-project']}`} ref={secondContainerRef}>
-                <img className={secondIsVisible ? 'show' : 'hidden'} src={require('../assets/photos/yt2.png')} alt={"photo"}/>
-                <img className={secondIsVisible ? 'show' : 'hidden-up'} src={require('../assets/photos/yt1.png')} alt={"photo"}/>
+                <img className={secondIsVisible ? 'show' : 'hidden'} src={require('../assets/photos/yt2.png')} alt={"my_app"}/>
+                <img className={secondIsVisible ? 'show' : 'hidden-up'} src={require('../assets/photos/yt1.png')} alt={"my_app"}/>
             </div>
         </div>
     )

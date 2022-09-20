@@ -1,5 +1,4 @@
 import styles from './WhatCanIBuild.module.scss'
-import Card from "../components/Card";
 import CardRow from "../components/CardRow";
 
 

@@ -1,6 +1,5 @@
 import styles from './MyProjects.module.scss'
 import Projects from "../components/Projects";
-import {useIntersection} from "../hooks/useIntersection";
 
 export default function MyProjects() {
 

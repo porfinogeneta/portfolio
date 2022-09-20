@@ -1,17 +1,19 @@
 import styles from './SwitchButton.module.scss'
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 
-export default function SwitchButton({ handleSelect }) {
+export default function SwitchButton({ _handleSelect }) {
 
     const [active, setActive] = useState(false) // if active=false, it means Designing is selected
 
+    const handleSelect = useRef(_handleSelect)
+
     useEffect(() => {
         if (active) {
-            handleSelect('Programming')
+            handleSelect.current('Programming')
         }else {
-            handleSelect('Designing')
+            handleSelect.current('Designing')
         }
-    }, [active])
+    }, [active, handleSelect])
 
     return (
         <div className={styles.container}>

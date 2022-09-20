@@ -1,5 +1,5 @@
 import styles from './Hamburger.module.scss'
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import {Link} from "react-router-dom";
 import IconsTrio from "./IconsTrio";
 
