@@ -36,7 +36,8 @@ export default function Technologies() {
         <section className={styles.container}>
             <div className={styles.info}>
                 <h1>Technologies</h1>
-                <p>I use modern web technologies which allows me to solve most of the problems encounterd during developing your projects.</p>
+                <p>I use modern web technologies, which allows me to solve most of the problems encountered
+                    during developing your projects.</p>
                 <SwitchButton _handleSelect={handleSelect}/>
             </div>
             <div className={styles.cards}>
