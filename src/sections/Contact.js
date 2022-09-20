@@ -9,9 +9,8 @@ export default function Contact() {
                 <p className={styles.intro}>Want to have your website live as fast as possible?
                 Have any project in mind or need a business solution? </p>
                 <div className={styles.info}>
-                    <p className={styles.contactme}>Contact me</p>
-                    <p>szymnmazurek@gmail.com</p>
-                    <p>+48 536 212 118</p>
+                    <p>Contact me</p>
+                    <p>szymonmazurek.dev@gmail.com</p>
                 </div>
             </div>
             <div>

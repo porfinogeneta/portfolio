@@ -40,7 +40,7 @@
 
 
     .info {
-      display: flex;
+      align-self: flex-start;
       gap: 128px;
       @media (max-width: 1080px) {
         width: 98%;
@@ -52,12 +52,6 @@
       :nth-child(2) {
         color: $primary;
         font-weight: 300;
-        font-size: 18px;
-        line-height: 27px;
-      }
-      :nth-child(3) {
-        color: $secondary;
-        font-weight: 600;
         font-size: 18px;
         line-height: 27px;
       }
