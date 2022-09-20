@@ -20,8 +20,8 @@ export default function Hamburger() {
             </div>
             {status === 'open' && (
                 <div className={styles.modal}>
-                    <h2><Link className={'link'} to={'/home'} onClick={() => setStatus('close')}>Home</Link></h2>
-                    <h2><Link className={'link'} to={'/dev-portfolio'} onClick={() => setStatus('close')}>Portfolio</Link></h2>
+                    <h2><Link className={'link'} to={'/'} onClick={() => setStatus('close')}>Home</Link></h2>
+                    <h2><Link className={'link'} to={'/portfolio'} onClick={() => setStatus('close')}>Portfolio</Link></h2>
                     <span onClick={() => setStatus('close')}>
                         <IconsTrio/>
                     </span>
