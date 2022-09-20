@@ -17,7 +17,7 @@ export default function Navbar() {
             </div>
             <div className={styles.navigation}>
                 <div className={styles.elem}>
-                    <Link className={'link'} to={'/'}>
+                    <Link className={'link'} to={'/home'}>
                         <h5 >About Me</h5>
                     </Link>
                 </div>

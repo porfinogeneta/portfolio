@@ -14,7 +14,7 @@ function App() {
           <BrowserRouter>
             <Navbar/>
                 <Routes>
-                    <Route exact path={"/"} element={<Home/>}></Route>
+                    <Route exact path={"/home"} element={<Home/>}></Route>
                     <Route path={"/dev-portfolio"} element={<Portfolio/>}></Route>
                     <Route path={"/credentials"} element={<Credentials/>}></Route>
                 </Routes>
