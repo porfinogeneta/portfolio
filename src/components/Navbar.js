@@ -17,12 +17,12 @@ export default function Navbar() {
             </div>
             <div className={styles.navigation}>
                 <div className={styles.elem}>
-                    <Link to={'/'}>
+                    <Link className={'link'} to={'/'}>
                         <h5 >About Me</h5>
                     </Link>
                 </div>
                 <div>
-                    <Link to={'/portfolio'}>
+                    <Link className={'link'} to={'/portfolio'}>
                         <h5 >Portfolio</h5>
                     </Link>
                 </div>
