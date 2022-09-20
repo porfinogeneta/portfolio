@@ -22,7 +22,7 @@ export default function Navbar() {
                     </Link>
                 </div>
                 <div>
-                    <Link className={'link'} to={'/portfolio'}>
+                    <Link className={'link'} to={'/dev-portfolio'}>
                         <h5 >Portfolio</h5>
                     </Link>
                 </div>
