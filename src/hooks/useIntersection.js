@@ -2,6 +2,7 @@ import {useEffect, useRef, useState} from "react";
 
 export const useIntersection = (options) => {
     const containerRef = useRef(null)
+
     const [isVisible, setIsVisible] = useState()
 
     const callback = (entries) => {
