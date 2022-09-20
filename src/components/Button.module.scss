@@ -1,0 +1,21 @@
+.main-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  outline: none;
+  padding: 8px 16px;
+  //isolation: isolate;
+  /* gradient */
+  background: linear-gradient(90.08deg, #EF5DA8 6.08%, #7879F1 80.25%);
+  box-shadow: 4px 12px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  cursor: pointer;
+  p {
+    color: #F9F9F9;
+  }
+  div {
+    margin-bottom: 4px;
+  }
+}

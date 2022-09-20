@@ -1,0 +1,13 @@
+.container {
+  background: #EAEAEA;
+  margin: 16px auto 0 auto;
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  padding: 4px;
+  border-radius: 48px;
+  gap: 4px;
+  @media (max-width: 1080px) {
+    width: 72%;
+  }
+}

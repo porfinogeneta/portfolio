@@ -1,0 +1,47 @@
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  grid-template-areas:
+  "name email"
+  "text text"
+  "text text"
+  "budget delivery"
+  "button button"
+;
+
+  @media (max-width: 768px) {
+    margin: 8px;
+    grid-template-areas:
+    "name name"
+    "email email"
+    "text text"
+    "text text"
+    "budget budget"
+    "delivery delivery"
+    "button button"
+  ;
+  }
+  span {
+    display: flex;
+    flex-direction: column;
+  }
+  :nth-child(1) {
+    grid-area: name;
+  }
+  :nth-child(2) {
+    grid-area: email;
+  }
+  :nth-child(3) {
+    grid-area: text;
+  }
+  :nth-child(4) {
+    grid-area: budget;
+  }
+  :nth-child(5) {
+    grid-area: delivery;
+  }
+  :nth-child(6) {
+    grid-area: button;
+  }
+}

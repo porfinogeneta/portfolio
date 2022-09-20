@@ -1,0 +1,49 @@
+@import "../scss/colors";
+
+.menu-btn-container {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  i {
+    background: $black2;
+    width: 32px;
+    height: 2px;
+    margin: 4px;
+    border-radius: 2px;
+    transition: all .2s ease-in-out;
+  }
+  .open:nth-child(1) {
+    transform: rotate(-45deg) translateY(14px);
+  }
+  .open:nth-child(2) {
+    opacity: 0;
+  }
+  .open:nth-child(3) {
+    transform: rotate(45deg) translateY(-14px);
+  }
+  .close:nth-child(1) {
+    transform: rotate(0);
+  }
+  .close:nth-child(2) {
+    opacity: 1;
+  }
+  .close:nth-child(3) {
+    transform: rotate(0);
+  }
+
+}
+// menu modal
+.modal {
+  position: absolute;
+  background: #F9F9F9;
+  width: 100vw;
+  height: 100vh;
+  top: 80px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+

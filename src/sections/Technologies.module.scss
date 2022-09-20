@@ -1,0 +1,44 @@
+.container {
+  min-height: 80vh;
+  @media (max-width: 1080px) {
+    margin: 8px;
+  }
+  .info {
+    margin: 200px auto 64px auto;
+    width: 30%;
+    text-align: center;
+    @media (max-width: 1080px) {
+      width: 100%;
+      margin: 128px auto 64px auto;
+    }
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 144px;
+    margin: 32px 128px 0 128px;
+    @media (max-width: 1080px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 64px;
+      width: 60%;
+      margin: auto;
+    }
+    :nth-child(1) {
+      transition-delay: 100ms;
+    }
+    :nth-child(2) {
+      transition-delay: 200ms;
+    }
+    :nth-child(3) {
+      transition-delay: 300ms;
+    }
+    :nth-child(4) {
+      transition-delay: 400ms;
+    }
+    :nth-child(5) {
+      transition-delay: 500ms;
+    }
+  }
+}

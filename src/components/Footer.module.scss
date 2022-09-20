@@ -1,0 +1,32 @@
+.container {
+  border-top: 1px solid #5C4D63;
+  display: flex;
+  align-items: center;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+  }
+  .text {
+    flex: 1;
+    display: flex;
+    gap: 8px;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
+  .lang {
+    text-align: center;
+    flex: 1;
+  }
+  .icons {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    @media (max-width: 768px) {
+      justify-content: center;
+    }
+  }
+}
