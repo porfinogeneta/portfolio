@@ -26,7 +26,6 @@ export default function ContactForm() {
     const verifyCaptcha = () =>{
         captchaRef.current.getResponse().then(res => {
             setCaptchaToken(res)
-            console.log(res)
         })
 
     }
@@ -55,7 +54,7 @@ export default function ContactForm() {
           }, (error) => {
               console.log(error.text);
               setBtnText('An Error Occurred, please refresh')
-              setTimeout(() => window.location.reload(), 2000)
+              setTimeout(() => window.location.reload(), 1000)
           });
         setName('')
         setEmail('')
