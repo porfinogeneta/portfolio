@@ -1,6 +1,7 @@
 import styles from './Footer.module.scss'
 import IconsTrio from "./IconsTrio";
 import {Link} from "react-router-dom";
+import LanguageSwitch from "./LanguageSwitch";
 
 export default function Footer() {
     return (
@@ -12,9 +13,10 @@ export default function Footer() {
                 </Link>
             </div>
             <div className={styles.lang}>
-                {/*<span>PL</span>*/}
-                {/*<span>/</span>*/}
-                {/*<span>EN</span>*/}
+                <div>
+                    <LanguageSwitch/>
+                </div>
+
             </div>
             <div className={styles.icons}>
                 <IconsTrio/>

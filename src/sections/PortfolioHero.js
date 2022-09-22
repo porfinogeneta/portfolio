@@ -1,20 +1,26 @@
 import styles from './PortfolioHero.module.scss'
 import Button from "../components/Button";
+import {useTranslation} from "react-i18next";
+import cookies from "js-cookie";
 
 export default function PortfolioHero() {
+
+    const {t} = useTranslation()
+
+    const currentLanguageCode = cookies.get('i18next') || 'en' // get currently selected language
+
     return (
         <section className={styles.container}>
             <div className={styles.photo}>
                 <img src={require('../assets/profile.svg').default} alt={"me"}/>
             </div>
             <div className={styles.info}>
-                <h3>Hey, I'm Simon</h3>
-                <h1>Who am I?</h1>
+                <h3>{t("hey")}</h3>
+                <h1>{t("who")}</h1>
                 <div>
-                    <p>I’m a web designer and a programmer with over three years of experience
-                        in building websites using modern technologies such as React, Vue and JavaScript.</p>
+                    <p>{t('who-p')}</p>
                 </div>
-                <Button/>
+                <Button text={currentLanguageCode === 'en' ? "Contact me" : 'Skontaktuj się'}/>
             </div>
         </section>
     )

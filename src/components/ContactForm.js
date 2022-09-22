@@ -5,6 +5,8 @@ import {useRef, useState} from "react";
 import emailjs from '@emailjs/browser';
 // captcha
 import Reaptcha from 'reaptcha';
+import {useTranslation} from "react-i18next";
+import cookies from "js-cookie";
 
 
 export default function ContactForm() {
@@ -16,8 +18,10 @@ export default function ContactForm() {
     const [phone, setPhone] = useState('')
     const [delivery, setDelivery] = useState('')
 
+    const { t } =useTranslation()
+    const currentLanguageCode = cookies.get('i18next') || 'en' // get currently selected language
 
-    const [btnText, setBtnText] = useState("Let's start building")
+    const [btnText, setBtnText] = useState(currentLanguageCode === 'en' ? "Let's start building" : 'Stwórzmy stronę')
 
     // captcha
     const [captchaToken, setCaptchaToken] = useState(null);
@@ -33,7 +37,7 @@ export default function ContactForm() {
 
     const handleEmail = (e) => {
         e.preventDefault();
-        setBtnText('Sending...')
+        setBtnText( currentLanguageCode === 'en' ? 'Sending...' : 'Wysyłanie...')
         const params = {
             name,
             email,
@@ -50,10 +54,10 @@ export default function ContactForm() {
             process.env.REACT_APP_PUBLIC_KEY,)
           .then((result) => {
               console.log(result.text);
-              setBtnText("Let's start building")
+              setBtnText(currentLanguageCode === 'en' ? "Let's start building" : 'Stwórzmy stronę')
           }, (error) => {
               console.log(error.text);
-              setBtnText('An Error Occurred, please refresh')
+              setBtnText(currentLanguageCode === 'en' ? 'Error, please refresh' : "Ups, odśwież stronę")
               setTimeout(() => window.location.reload(), 1000)
           });
         setName('')
@@ -66,7 +70,7 @@ export default function ContactForm() {
     return (
         <form onSubmit={handleEmail}>
             <span>
-                <label>Your Name</label>
+                <label>{t('name')}</label>
                 <input
                     type={"text"}
                     name={"client_name"}
@@ -76,7 +80,7 @@ export default function ContactForm() {
                 />
             </span>
             <span>
-                <label>Your Email Adres</label>
+                <label>{t('email')}</label>
                 <input
                     type={"email"}
                     name={"client_email"}
@@ -86,7 +90,7 @@ export default function ContactForm() {
                 />
             </span>
             <span>
-                <label>Project Details</label>
+                <label>{t('details')}</label>
                 <textarea
                     required name={"details"}
                     onChange={(e) => setDetails(e.target.value)}
@@ -94,7 +98,7 @@ export default function ContactForm() {
                 />
             </span>
             <span>
-                <label>Your Phone Number</label>
+                <label>{t('number')}</label>
                 <input
                     type={"phone"}
                     name={"client_phone"}
@@ -103,7 +107,7 @@ export default function ContactForm() {
                 />
             </span>
             <span>
-                <label>Delivery Time</label>
+                <label>{t('delivery')}</label>
                 <input
                     type={"date"}
                     required name={"delivery"}

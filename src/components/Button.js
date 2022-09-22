@@ -1,6 +1,6 @@
 import styles from './Button.module.scss'
 
-export default function Button({text="Contact me", icon="arrow"}) {
+export default function Button({text, icon="arrow"}) {
 
     const handleScroll = () => {
         const section = document.querySelector('#contact')

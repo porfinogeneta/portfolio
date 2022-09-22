@@ -5,7 +5,14 @@ import IconsTrio from "./IconsTrio";
 import {Link} from "react-router-dom";
 import Hamburger from "./Hamburger";
 
+// languages
+import { useTranslation} from "react-i18next";
+import LanguageSwitch from "./LanguageSwitch";
+
+
 export default function Navbar() {
+
+    const { t } = useTranslation()
 
 
     return (
@@ -16,14 +23,16 @@ export default function Navbar() {
                 </div>
             </div>
             <div className={styles.navigation}>
+
                 <div>
                     <Link className={'link'} to={'/'}>
-                        <h5 >About Me</h5>
+                        <h5>{t('nav')}</h5>
                     </Link>
                 </div>
+                <LanguageSwitch/>
                 <div>
                     <Link className={'link'} to={'/portfolio'}>
-                        <h5 >Portfolio</h5>
+                        <h5>Portfolio</h5>
                     </Link>
                 </div>
             </div>

@@ -1,20 +1,21 @@
 import styles from './HomeHero.module.scss'
 import Button from "../components/Button";
+import {useTranslation} from "react-i18next";
+import cookies from "js-cookie";
 
 export default function HomeHero() {
 
+    const currentLanguageCode = cookies.get('i18next') || 'en' // get currently selected language
+
+    const  { t } = useTranslation()
+
     return(
         <div className={`${styles.container}`} >
-            <h3>Hey, I'm Szymon Mazurek</h3>
-            <h1>Freelance Web Designer & JS Programmer</h1>
-            <p>
-               Hey, I’m a web developer and Computer Science student.
-                Have you ever wanted to have your personal or company website?
-                Maybe you just have a project in mind? Don’t hesitate and contact me!
-                Together we can develop your idea and make it accessible to the entire World.
-            </p>
+            <h3>{t("my-intro")}</h3>
+            <h1>{t('main-header')}</h1>
+            <p>{t('introduction')}</p>
             <span>
-                <Button/>
+                <Button text={currentLanguageCode === 'en' ? "Contact me" : "Skontaktuj się"}/>
             </span>
         </div>
     )

@@ -1,15 +1,18 @@
 import styles from './Contact.module.scss'
 import ContactForm from "../components/ContactForm";
+import {useTranslation} from "react-i18next";
 
 export default function Contact() {
+
+    const { t } = useTranslation()
+
     return (
         <section className={styles.container} id={"contact"}>
             <div className={styles.contacts}>
-                <h1>Got a project in mind?</h1>
-                <p className={styles.intro}>Want to have your website live as fast as possible?
-                Have any project in mind or need a business solution? </p>
+                <h1>{t('Project')}</h1>
+                <p className={styles.intro}>{t('project-intro')}</p>
                 <div className={styles.info}>
-                    <p>Contact me</p>
+                    <p>{t('contact')}</p>
                     <p>szymonmazurek.dev@gmail.com</p>
                 </div>
             </div>
