@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.85359ce7.css",
+    "main.js": "/portfolio/static/js/main.853bb360.js",
+    "static/media/yt2.png": "/portfolio/static/media/yt2.bf19713916bc2ad57ea0.png",
+    "static/media/yt1.png": "/portfolio/static/media/yt1.d094de6f785f09031a8a.png",
+    "static/media/rockpaperscissors.png": "/portfolio/static/media/rockpaperscissors.9ed7f86bb71fea502354.png",
+    "static/media/profile.svg": "/portfolio/static/media/profile.255f74ab578636ce7c8ddae5812f3d41.svg",
+    "static/media/react-js-icon.svg": "/portfolio/static/media/react-js-icon.4ee8d0003d0f7f9ccea03ac4aa13fb99.svg",
+    "static/media/google-firebase-icon.svg": "/portfolio/static/media/google-firebase-icon.2032586ca6c0a4074c62cffd16b28343.svg",
+    "static/media/ecommerce.svg": "/portfolio/static/media/ecommerce.fce2b737344006bf650066fe41ab1b0f.svg",
+    "static/media/rocket.svg": "/portfolio/static/media/rocket.ae8e299bfad5f527899ca0b2d302c7fc.svg",
+    "static/media/portfolio.svg": "/portfolio/static/media/portfolio.ea04194c334e1c650b10d07c5ddbdf0e.svg",
+    "static/media/game.svg": "/portfolio/static/media/game.03f23c719b86e0e2b1851e416cf48ef4.svg",
+    "static/media/bootstrap-5-logo-icon.svg": "/portfolio/static/media/bootstrap-5-logo-icon.37d097d9e1da361f1669f687b3cc56ba.svg",
+    "static/media/web-api-icon.svg": "/portfolio/static/media/web-api-icon.42e9cba41c80a4492c624a8190974fe1.svg",
+    "static/media/tailwind-css-icon.svg": "/portfolio/static/media/tailwind-css-icon.6a54db1f931b18811bd68fd565e3ce0f.svg",
+    "static/media/figma-icon.svg": "/portfolio/static/media/figma-icon.21a5c656a251bf0d7506a244f0e04d2f.svg",
+    "static/media/blog.svg": "/portfolio/static/media/blog.7a55f34c77ebb5330ffcb95758d0c958.svg",
+    "static/media/phone.svg": "/portfolio/static/media/phone.f766e58cfa1ce9c549f9db98e797d68c.svg",
+    "index.html": "/portfolio/index.html",
+    "static/media/material-design-seeklogo.com.svg": "/portfolio/static/media/material-design-seeklogo.com.81c1363b0244e2fa5b288b5b416760ad.svg",
+    "static/media/vue-js-icon.svg": "/portfolio/static/media/vue-js-icon.9f537ef871539b63299dea9ec24182f4.svg",
+    "main.85359ce7.css.map": "/portfolio/static/css/main.85359ce7.css.map",
+    "main.853bb360.js.map": "/portfolio/static/js/main.853bb360.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.85359ce7.css",
+    "static/js/main.853bb360.js"
+  ]
+}
