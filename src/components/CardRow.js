@@ -1,5 +1,4 @@
 import Card from "./Card";
-import {useIntersection} from "../hooks/useIntersection";
 import cookies from 'js-cookie'
 
 
