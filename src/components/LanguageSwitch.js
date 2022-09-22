@@ -1,7 +1,6 @@
 import styles from './LanguageSwitch.module.scss'
 
 import cookies from 'js-cookie'
-import i18next from "i18next";
 import {useTranslation} from "react-i18next";
 
 export default function LanguageSwitch() {
