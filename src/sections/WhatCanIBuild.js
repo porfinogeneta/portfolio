@@ -1,6 +1,7 @@
 import styles from './WhatCanIBuild.module.scss'
 import CardRow from "../components/CardRow";
 import {useTranslation} from "react-i18next";
+import {useIntersection} from "../hooks/useIntersection";
 
 
 const cards = [
@@ -15,7 +16,7 @@ const cards = [
         icon: 'ecommerce',
         header: 'I can design and create fully operational eCommerce',
         headerPL: 'Mogę stworzyć w pełni gotowy do działania sklep internetowy',
-        paragraph: 'There is no doubt that modern market is the internet one. By accessing it your brand will begin to grow with an unprecedented pace!',
+        paragraph: 'There is no doubt that modern market is the internet one. By accessing it your brand will begin to grow with an unprecedented rate!',
         paragraphPL: 'Nie ma wątpliwości, że nowoczesny rynek to to ten w internecie. Przez dostęp do niego Twoja marka wkroczy na ścieżkę bezprecedensowego wzrostu!'
     },
     {id: 3,
@@ -31,11 +32,19 @@ export default function WhatCanIBuild() {
 
     const {t} = useTranslation()
 
+    const { isVisible, containerRef} = useIntersection(
+        {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0
+        }
+    )
+
     return (
-        <section className={styles.container}>
+        <section className={styles.container} ref={containerRef}>
             <h1>{t('what-build')}</h1>
             <div className={styles.cards}>
-                <CardRow cards={cards}/>
+                <CardRow cards={cards} isVisible={isVisible}/>
             </div>
         </section>
     )

@@ -3,22 +3,15 @@ import {useIntersection} from "../hooks/useIntersection";
 import cookies from 'js-cookie'
 
 
-export default function CardRow({cards, centered=false, size='normal'}) {
+export default function CardRow({cards, isVisible, centered=false, size='normal'}) {
 
     const currentLanguageCode = cookies.get('i18next') || 'en' // get currently selected language
 
-    const { isVisible, containerRef} = useIntersection(
-        {
-            root: null,
-            rootMargin: "0px",
-            threshold: 0.1
-        }
-    )
 
     return (
         <>
             {cards.map((card) => (
-                <div key={card.id} ref={containerRef} className={`${isVisible ? 'show' : 'hidden'}`}>
+                <div key={card.id} className={`${isVisible ? 'show' : 'hidden'}`}>
                     {currentLanguageCode === 'en' && (
                         <Card icon={card.icon} header={card.header} paragraph={card.paragraph} size={size} centered={centered}/>
                     )}

@@ -9,7 +9,7 @@ export default function Contact() {
     return (
         <section className={styles.container} id={"contact"}>
             <div className={styles.contacts}>
-                <h1>{t('Project')}</h1>
+                <h2>{t('Project')}</h2>
                 <p className={styles.intro}>{t('project-intro')}</p>
                 <div className={styles.info}>
                     <p>{t('contact')}</p>
